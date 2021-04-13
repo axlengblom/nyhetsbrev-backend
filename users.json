@@ -1,0 +1,75 @@
+[
+  {
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "email": "admin@admin.com",
+    "subscribed": false,
+    "userid": "f17c83e0-e49a-486d-bb64-98088a13ed8f0"
+  },
+  {
+    "firstName": "asd",
+    "lastName": "asd",
+    "email": "asd",
+    "subscribed": true,
+    "userid": "e2c4b7b2-13ae-40ca-a350-e8bd485b5f0a"
+  },
+  {
+    "firstName": "asda",
+    "lastName": "sdasda",
+    "email": "asdasda",
+    "subscribed": true,
+    "userid": "099e5f9f-3795-4117-9c6e-13c39f345b9e"
+  },
+  {
+    "firstName": "axel",
+    "lastName": "engblom",
+    "email": "axel@gmail.com",
+    "subscribed": true,
+    "userid": "c4725dca-a95c-4228-919b-531514a4ed98"
+  },
+  {
+    "_id": "607602ca5e6d4f03a00f2e5b",
+    "firstName": "erika",
+    "lastName": "oster",
+    "email": "erika@gmail.com",
+    "subscribed": true,
+    "userid": "8719abab-7b8e-41b6-8dad-251aea8ba599",
+    "__v": 0
+  },
+  {
+    "_id": "6076032ed057c445187b138d",
+    "firstName": "Axel",
+    "lastName": "Engblom",
+    "email": "axel@gmail.com",
+    "subscribed": false,
+    "userid": "d3aa1545-6651-4bd8-bb02-953a5bee2816",
+    "__v": 0
+  },
+  {
+    "_id": "607603561e465c3550fdba0b",
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "email": "admin@admin.com",
+    "subscribed": false,
+    "userid": "80529272-51c7-4be5-b7f1-8020b3f59618",
+    "__v": 0
+  },
+  {
+    "_id": "6076039869fd53107498c582",
+    "firstName": "Erika",
+    "lastName": "Öster",
+    "email": "erika@gmail.com",
+    "subscribed": true,
+    "userid": "d4752225-65fc-421f-a95e-823263652e68",
+    "__v": 0
+  },
+  {
+    "_id": "6076041d9000a71ddcd82346",
+    "firstName": "Peter",
+    "lastName": "Petersson",
+    "email": "peter@gmail.com",
+    "subscribed": true,
+    "userid": "7930a0fa-43d5-4740-a89c-27570c2ccf2f",
+    "__v": 0
+  }
+]
