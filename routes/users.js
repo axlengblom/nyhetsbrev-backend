@@ -30,7 +30,7 @@ router.post("/new-user", (req, res) => {
       newUser
         .save()
         .then((result) => {
-          res.send(false);
+          res.send(newUser);
         })
         .catch((err) => {
           console.log(err);
@@ -39,7 +39,7 @@ router.post("/new-user", (req, res) => {
   });
 });
 
-router.post("/log-in", function (req, res) {
+router.post("/log-in", (req, res) => {
   let findUser = async () => {
     let found = await User.find({ email: req.body.email });
     return found;
@@ -47,20 +47,48 @@ router.post("/log-in", function (req, res) {
 
   let found = findUser();
   found.then((data) => {
-    if (bcrypt.compareSync(req.body.passWord, data[0].passWord)) {
-      data[0].passWord = undefined;
-
-      res.send(data);
-    } else {
+    if (data.length == 0) {
       res.send(false);
+    } else {
+      if (bcrypt.compareSync(req.body.passWord, data[0].passWord)) {
+        data[0].passWord = undefined;
+
+        res.send(data);
+      } else {
+        res.send(false);
+      }
     }
   });
 });
 
-router.post("/update-sub", function (req, res) {
+router.post("/update-sub", (req, res) => {
   let index = { userid: req.body.userid };
   let update = { subscribed: req.body.subscribed };
-  User.findOneAndUpdate(index, update).catch((err) => console.log(err));
+  User.findOneAndUpdate(index, update)
+    .then((data) => {
+      let findUser = async () => {
+        let found = await User.find({ userid: req.body.userid });
+        return found;
+      };
+      let found = findUser();
+      found.then((data) => {
+        data[0].passWord = undefined;
+        res.send(data);
+      });
+    })
+    .catch((err) => console.log(err));
+});
+
+router.post("/validate-logged-in-user", (req, res) => {
+  let findUser = async () => {
+    let found = await User.find({ userid: req.body.userid });
+    return found;
+  };
+  let found = findUser();
+  found.then((data) => {
+    data[0].passWord = undefined;
+    res.send(data);
+  });
 });
 
 module.exports = router;
