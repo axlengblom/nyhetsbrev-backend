@@ -1,7 +1,5 @@
 # nyhetsbrev-backend
 
-The backend can be found here: https://github.com/ToniHalmetoja/newsletter-backend/
-
 1. First install Node.js from their website (https://nodejs.org/en/)
 
 2. Navigate the console to the nyhetsbrev-backend folder.
