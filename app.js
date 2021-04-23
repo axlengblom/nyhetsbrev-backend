@@ -7,6 +7,8 @@ const mongoose = require("mongoose");
 const url =
   "mongodb+srv://axel:axel@cluster0.tcmv1.mongodb.net/Nyhetsbrev?retryWrites=true&w=majority";
 mongoose
+
+  //connects to the database
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((res) => console.log("connected"))
   .catch((err) => console.log("error"));

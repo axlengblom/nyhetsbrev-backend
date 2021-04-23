@@ -3,6 +3,7 @@ var router = express.Router();
 
 const User = require("../models/user");
 
+//takes a password from the user and then retrieves all the users from the db and dispalys their information on the page.
 router.get("/users", function (req, res, next) {
   const reject = () => {
     res.setHeader("www-authenticate", "Basic");
@@ -45,6 +46,7 @@ router.get("/users", function (req, res, next) {
     });
 });
 
+//takes a password from the user and then displays the emails that are subscribed to the newsletter
 router.get("/users/subscribed", function (req, res, next) {
   const reject = () => {
     res.setHeader("www-authenticate", "Basic");
