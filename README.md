@@ -10,9 +10,9 @@ https://axelengblom-nyhetsbrev.herokuapp.com/
 
 Modules Used:
 
-xpress
+express
 
-ongoose
+mongoose
 
 uuid
 
